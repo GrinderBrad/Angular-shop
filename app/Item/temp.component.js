@@ -8,8 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var TempComponent = (function () {
     function TempComponent() {
-        this.zalups = [new zalupka("zalupa1"), new zalupka("zalupa2"), new zalupka("zalupa3")];
+        this.hui = new Variables();
     }
+    TempComponent.prototype.out = function () {
+        this.hui.name += 'a';
+        alert(this.hui.name);
+    };
     return TempComponent;
 }());
 TempComponent = __decorate([
@@ -19,10 +23,10 @@ TempComponent = __decorate([
     })
 ], TempComponent);
 exports.TempComponent = TempComponent;
-var zalupka = (function () {
-    function zalupka(inputname) {
-        this.name = inputname;
+var Variables = (function () {
+    function Variables() {
+        this.name = "hello";
     }
-    return zalupka;
+    return Variables;
 }());
 //# sourceMappingURL=temp.component.js.map

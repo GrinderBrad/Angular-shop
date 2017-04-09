@@ -1,20 +1,15 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core"
 
 @Component({
     selector : 'temp',
-    //templateUrl: './app/temp/temp.template.html'
-    template: `<label>Введите имя:</label>
-                 <input [(ngModel)]="name" placeholder="name">
-                 <h1>Добро пожаловать {{name}}!</h1>
-                 <button (click) = "out()">опа</button>`
+    templateUrl : './app/temp/temp.template.html'
 })
 export class TempComponent{
-    hui = new Variables();
-     out():void{
-         this.hui.name += 'a';
-         alert(this.hui.name);
-     }
+    zalups:zalupka[] = [new zalupka("zalupa1"),new zalupka("zalupa2"),new zalupka("zalupa3")] 
 }
-class Variables{
-    name : string = "hello";
+class zalupka{
+    name:string;
+    constructor(inputname:string){
+        this.name = inputname;
+    }
 }
